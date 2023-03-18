@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin</title>
+<link rel="stylesheet" href="Admin.css">
+<script src="Admin.js" type="text/javascript"></script>
+<script src="https://kit.fontawesome.com/b5848efe47.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="container">
+    	<div class="square" onclick="viewProductList()">View Products</div>
+      	<div class="square" onclick="viewUserList()">View Customers</div>
+      	<div class="square" onclick="viewDeliverymanList()">View Deliverymans</div>
+      	<div class="square" onclick="addQuantity()">Add Product quantity</div>
+      	<div class="square" onclick="addDeliveryman()">Add Deliveryman</div>
+      	
+    </div>
+    
+    <table id="table">
+	</table>
+	<button id="back" onclick="viewProductListToBack()">Back</button>
+	
+	<div id="parent">
+  		<div id="child"></div>
+  		<p id="detail"></p>
+	</div>
+	<button id="detailBack" onclick="detailToBack()">Back</button>
+	
+	<div id="main">
+  		<div id="whole">
+  			<label for="first-name">First Name:</label>
+  			<input type="text" id="firstName" name="first-name" class="addDmInput" required>
+
+  			<label for="last-name">Last Name:</label>
+  			<input type="text" id="lastName" name="last-name" class="addDmInput" required>
+
+  			<label for="mobile-number">Mobile Number:</label>
+  			<input type="tel" id="mobileNumber" name="mobile-number" pattern="[0-9]{10}" class="addDmInput" required>
+
+  			<label for="district">District:</label>
+  			<select id="district" name="district" required>
+					  <option value="Chennai">Chennai</option>
+					  <option value="Coimbatore">Coimbatore</option>
+					  <option value="Cuddalore">Cuddalore</option>
+					  <option value="Dharmapuri">Dharmapuri</option>
+					  <option value="Dindigul">Dindigul</option>
+					  <option value="Erode">Erode</option>
+					  <option value="Kanchipuram">Kanchipuram</option>
+					  <option value="Kanyakumari">Kanyakumari</option>
+					  <option value="Karur">Karur</option>
+					  <option value="Krishnagiri">Krishnagiri</option>
+					  <option value="Madurai">Madurai</option>
+					  <option value="Nagapattinam">Nagapattinam</option>
+					  <option value="Namakkal">Namakkal</option>
+					  <option value="Perambalur">Perambalur</option>
+					  <option value="Pudukkottai">Pudukkottai</option>
+					  <option value="Ramanathapuram">Ramanathapuram</option>
+					  <option value="Salem">Salem</option>
+					  <option value="Sivaganga">Sivaganga</option>
+					  <option value="Tenkasi">Tenkasi</option>
+					  <option value="Thanjavur">Thanjavur</option>
+					  <option value="Theni">Theni</option>
+					  <option value="Thoothukudi">Thoothukudi</option>
+					  <option value="Tiruchirappalli">Tiruchirappalli</option>
+					  <option value="Tirunelveli">Tirunelveli</option>
+					  <option value="Tirupathur">Tirupathur</option>
+					  <option value="Tiruppur">Tiruppur</option>
+					  <option value="Tiruvallur">Tiruvallur</option>
+					  <option value="Tiruvannamalai">Tiruvannamalai</option>
+					  <option value="Tiruvarur">Tiruvarur</option>
+					  <option value="Vellore">Vellore</option>
+					  <option value="Viluppuram">Viluppuram</option>
+					  <option value="Virudhunagar">Virudhunagar</option>
+  			</select>
+
+  			<label for="username">Username:</label> 
+  			<input type="text" id="username" name="username" class="addDmInput" required>
+
+  			<label for="password">Password:</label>
+  			<input type="password" id="password" name="password" minlength="8" class="addDmInput" required>
+
+  			<label for="confirm-password">Confirm Password:</label>
+  			<input type="password" id="confirmPassword" name="confirm-password" minlength="8" class="addDmInput" required>
+
+  			<input type="submit" value="Submit" id="addDmSubmit" onclick="addDeliverymanSubmit()">
+  			
+  			<button id="addDmBack" onclick="addDmToBack()">Back</button>
+ 		</div>
+	</div>
+	<div id="addQuantityFull">
+    	<label for="Product-name">Product Name:</label>
+  		<select id="prNameSelect"></select>
+
+  		<label for="Add-number">Add Number:</label>
+  		<input type="number" id="addQuantity" name="Add-Number" required="">
+      	<button id="addQuantitySubmit" onclick="addQuantitySubmit()">Submit</button>
+      	<button id="addQuantityBack" onclick="addQuantityToBack()">Back</button>
+  </div>
+	
+</body>
+</html>

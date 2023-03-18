@@ -1,0 +1,214 @@
+@charset "UTF-8";
+#container {
+	display:flex;/**flex**/
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+.square {
+  	box-sizing: border-box;
+    width: 250px;
+    height:250px;
+    background-color: #00bcd4;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #fff;        
+    cursor:pointer;
+    font-weight: bold;
+}
+.profile-icon {
+   	position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 1500px;
+  margin: auto;
+  font-size: 16px;
+  display:none;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  width:500px;
+}
+
+th {
+  background-color: #0077be;
+  color: #fff;
+  font-weight: bold;
+  height: 100px;
+  font-size: 35px;
+}
+td {
+  height: 200px;
+  font-size:30px;
+  height:250px;
+}
+tr {
+	cursor:pointer;
+}
+.pic {
+	height:200px;
+	width:200px;
+}
+#parent {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(to right, #4e73df, #224abe8a);
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+  height:98vh;
+  display:none;
+  justify-content: center;
+  align-items: center;
+}
+
+#child {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff;
+	font-size: 32px;
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+	width: 30%;
+	background: white;
+	height: 25%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+#detail {
+	font-size: 35px;
+    margin-top: 300px;
+   
+}
+#back,#detailBack {
+	display:none;
+	margin-left: 50%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.icon {
+	font-size:100px;
+	color:black;
+}
+
+/*************************************/
+
+#main{
+  width: 25%;
+  margin: 0px auto;
+  position: relative;
+  background: linear-gradient(to bottom, #33ccff 0%, #9999ff 100%);
+  border-radius: 3px;
+  display:none;
+}
+
+#whole {
+    display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 11px;
+	margin: 15% 30%;
+	margin-top: 55%;
+}
+
+label {
+  font-weight: bold;
+}
+
+.addDmInput {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+#addDmSubmit {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 10px 50px;
+}
+
+#addDmSubmit:hover {
+  background-color: #3e8e41;
+}
+
+#district{
+  padding: 5px 45px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+#addDmBack {
+	margin: auto auto 30px auto;
+    width: 50px;
+    height: 30px;
+    background-color: yellow;
+}
+
+/*************************************/
+
+#addQuantityFull{
+display: none;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+background-color: #f1f1f1;
+margin: 15% 30% 0% 30%;
+height: 50vh;
+}
+
+#addQuantitySubmit{
+padding: 15px 25px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+margin: 10px 50px;
+position: absolute;
+top: 62%;
+font-size: 20px;
+}
+#addQuantitySubmit:hover{
+  background-color: #3e8e41;
+}
+#prNameSelect,#addQuantity{
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+label{
+  font-weight: bold;
+}
+#prNameSelect {
+	width:300px;
+}
+#addQuantity {
+	width:100px;
+}
+#addQuantityBack {
+	position: absolute;
+    top: 72%;
+}
+

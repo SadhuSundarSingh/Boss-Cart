@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Deliveryman</title>
+<link rel="stylesheet" href="Deliveryman.css">
+<script src="Deliveryman.js" type="text/javascript"></script>
+<script src="https://kit.fontawesome.com/b5848efe47.js" crossorigin="anonymous"></script>
+</head>
+<body onload="cookieCheck()">
+	
+	<div id="signinBox">
+		<div>
+			<h1 id="signinHead">
+				Sign in
+			</h1>
+			<p class="label">
+				Enter your mobile number
+			</p>
+			<input type="text" class="inputBox" id="signinMobNumber" value="">
+			<p class="label">
+				Enter your password
+			</p>
+			<input type="password" class="inputBox" id="signinPass" value="">
+			<br><br><br>
+			<input type="button" value="Submit" class="inputBox" onclick="signin()">
+			<br><br><br>
+			<h1 id="response"></h1>
+		</div>		
+	</div>
+	
+	<div id="homePage">
+		<div class="homePageElement" onclick="deliverymanWork()"> Work </div>
+		<div class="homePageElement" onclick="deliverymanHistory()"> History </div>
+		<div class="homePageElement" onclick="deliverymanProfile()"> Profile </div>
+	</div>
+		
+	<div id="workFull">
+		<div>
+			<div class="pageHead"> Your works</div>
+		</div>
+	</div>
+	
+	<div id="historyFull">
+		<div>
+			<div class="pageHead"> Your history</div>
+		</div>
+	</div>
+	
+	<div id="profileFull">
+		<div>
+			<div class="pageHead"> Your profile</div>
+			<div id="firstName" class="profileBox">
+				<P>First name : </P>
+			</div> 
+			<div id="lastName" class="profileBox">
+				<P>Last name : </P>
+			</div> 
+			<div id="mobileNumber" class="profileBox">
+				<P>Mobile number : </P>
+			</div> 
+			<div id="userName" class="profileBox">
+				<P>User name : </P>
+			</div> 
+			<div id="password" class="profileBox">
+				<P>Password : </P>
+			</div> 
+			<div id="address" class="profileBox">
+				<P>Address : </P>
+			</div>
+			<a href="#" class="backButton" onclick="profileToHome()">Back</a> 
+			<input type="button" value="Logout" id="logout" onclick="logout()">
+		</div>
+	</div>
+</body>
+</html>

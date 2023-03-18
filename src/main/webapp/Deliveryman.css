@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+.label,#response {
+	margin-left:30px;
+	margin-top:30px;
+	font-size:20px;
+}
+
+.inputBox {
+	margin-left:30px;
+	height:20px;
+	border-radius:5px;
+	border: 2px solid black;
+}
+#signinBox {
+  height:70vh;
+	/**display:flex;
+	justify-content:center;
+	align-items:center;
+	width: 50%;
+  	margin: 0 auto;**/
+  	
+  	width: 100%;
+  max-width: 400px;
+  background: linear-gradient(to bottom right, #00FFFF, #FF00FF);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+#signinHead {
+	display: flex;
+    justify-content: center;
+}
+#homePage {
+	background-color:#00800054;
+    height: 500px;
+    width: 1500px;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+.homePageElement {
+	height: 80%;
+    width: 30%;
+    background-color: #ff000038;
+     display: flex;
+    justify-content: center;
+    align-items: center;	
+    font-size:50px;
+    cursor:pointer;
+    box-shadow: -3px -3px 10px 1px rgba(0,0,0,1) inset;
+}
+.pageHead {
+	width: 1200px;
+    background-color: yellowgreen;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+#workFull,#historyFull,#profileFull {
+	display:none;
+}
+.workBox {
+	width: 1196px;
+    background-color: #32c3cd9c;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 22px;
+    border: 2px solid black;
+    border-top: none;
+}
+.productDetail {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: #938181b5;
+    height: 100%;
+    width: 33%;
+}
+.deliveredButton {
+	height: 50px;
+    width: 150px;
+    font-size: 20px;
+    background-color: #7cfc00b3;
+    cursor: pointer;
+}
+.backButton {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 50px;
+    width: 150px;
+    margin-left: 44%;
+    color: white;
+    background: #FF8C00;
+    margin-bottom: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 1px 3px 65px -25px rgba(0,0,0,0.75) inset;
+}
+.backButton:hover{
+	background:#FFA500;
+}
+i {
+	font-size:100px;
+}
+.profileBox {
+	background-color: #000000c9;
+    height: 100px;
+    width: 750px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+#logout {
+	margin-left: 47%;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 50px;
+    cursor: pointer;
+    background-color: #FF4500;
+    border-radius: 5px;
+    color: WHITE;
+    font-weight: 500;
+}
+#logout:hover {
+	background-color:#FF6347;
+}

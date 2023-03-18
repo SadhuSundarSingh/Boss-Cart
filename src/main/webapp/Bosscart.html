@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User</title>
+<link rel="stylesheet" href="loginPage.css">
+<script src="loginPage.js" type="text/javascript"></script>
+<script src="https://kit.fontawesome.com/b5848efe47.js" crossorigin="anonymous"></script>
+</head>
+<body onload="cookieCheck()">
+	<div id="mainBox">
+		<div class="inBox" id="leftInBox">
+			<img src="logo.png" id="logo">
+		</div>
+		<div class="inBox" id="rightInBox">
+			<div id="signinBox">	
+				<h1>
+					Sign in
+				</h1>
+				<p class="label">
+					Enter your mobile number
+				</p>
+				<input type="number" class="inputBox" id="signinMobNumber" value="">
+				<p class="label">
+					Enter your password
+				</p>
+				<input type="password" class="inputBox" id="signinPass" value="">
+				<br><br><br>
+				<input type="button" value="Submit" class="inputBox" onclick="login();">
+				<br><br><br><br>
+				<span id="span">Don't have an account? <a href="#" onclick="changeToSignUp()">Sign Up</a></span>
+			</div>
+			
+			<div id="signupBox">
+				<h1 id="signupHead">
+					Sign up
+				</h1>
+				<p class="label">
+					Enter your first name
+				</p>
+				<input type="text" class="inputBox" id="firstName" value="">
+				<p class="label">
+					Enter your last name
+				</p>
+				<input type="text" class="inputBox" id="lastName" value="">
+				<p class="label">
+					Enter your mobile number
+				</p>
+				<input type="number" class="inputBox" id="signupMobNumber" value="">
+				<p class="label">
+					Enter your address
+				</p>
+				<select id="district">
+					  <option value="Chennai">Chennai</option>
+					  <option value="Coimbatore">Coimbatore</option>
+					  <option value="Cuddalore">Cuddalore</option>
+					  <option value="Dharmapuri">Dharmapuri</option>
+					  <option value="Dindigul">Dindigul</option>
+					  <option value="Erode">Erode</option>
+					  <option value="Kanchipuram">Kanchipuram</option>
+					  <option value="Kanyakumari">Kanyakumari</option>
+					  <option value="Karur">Karur</option>
+					  <option value="Krishnagiri">Krishnagiri</option>
+					  <option value="Madurai">Madurai</option>
+					  <option value="Nagapattinam">Nagapattinam</option>
+					  <option value="Namakkal">Namakkal</option>
+					  <option value="Namakkal">Namakkal</option>
+					  <option value="Perambalur">Perambalur</option>
+					  <option value="Pudukkottai">Pudukkottai</option>
+					  <option value="Ramanathapuram">Ramanathapuram</option>
+					  <option value="Salem">Salem</option>
+					  <option value="Sivaganga">Sivaganga</option>
+					  <option value="Tenkasi">Tenkasi</option>
+					  <option value="Thanjavur">Thanjavur</option>
+					  <option value="Theni">Theni</option>
+					  <option value="Thoothukudi">Thoothukudi</option>
+					  <option value="Tiruchirappalli">Tiruchirappalli</option>
+					  <option value="Tirunelveli">Tirunelveli</option>
+					  <option value="Tirupathur">Tirupathur</option>
+					  <option value="Tiruppur">Tiruppur</option>
+					  <option value="Tiruvallur">Tiruvallur</option>
+					  <option value="Tiruvannamalai">Tiruvannamalai</option>
+					  <option value="Tiruvarur">Tiruvarur</option>
+					  <option value="Vellore">Vellore</option>
+					  <option value="Viluppuram">Viluppuram</option>
+					  <option value="Virudhunagar">Virudhunagar</option>
+				</select>
+				
+				<p class="label">
+					Enter your user name
+				</p>
+				<input type="text" class="inputBox" id="userName" value="">
+				<p class="label">
+					Enter your password
+				</p>
+				<input type="password" class="inputBox" id="signupPass" value="">
+				<p class="label">
+					Enter your confirm password
+				</p>
+				<input type="password" class="inputBox" id="signupConfirmPass" value="">
+				<br><br><br>
+				<input type="button" value="Submit" class="inputBox" onclick="signup();">
+				
+				<h3 id="span">Do you have an account? <a href="#" onclick="changeToSignIn()">Sign In</a></h3>
+				<h3 id="response">
+				</h3>
+			</div>
+		</div>
+		
+		 <div id="profileMainBox">
+		    <div class="profileOption" onclick="updateProfile()">
+		      <h2>My profile</h2>
+		    </div>
+		     <div class="profileOption" onclick="viewOrders()">
+		       <h2>Orders</h2>
+		    </div>
+		     <div class="profileOption" onclick="viewWishlist()">
+		       <h2>Wishlist</h2>
+		    </div>
+		    <div class="profileOption" onclick="logout()">
+		       <h2>Logout</h2>
+		    </div>
+		    <div class="profileOption">
+		       <a href="#" onclick="profileBack()">Back</a>
+		    </div>
+  		</div>
+  		
+  		<div id="productDetailMainBox">
+		    <div id="productName">
+		      <p id="productNameIT"></p>
+		    </div>
+		    <h2 id="productDetail">
+		    </h2>
+		    <input type="range" min="1" max="5" id="productQuantity" value="1" onclick="viewProductQuantity()">
+		    <h3 id="productQuantityText">Quantity : 1</h3><br>
+		    <input type="button" value="buy now" onclick="buyNow(this)" class="productDetailButt" id="buyButton"><br>
+		    
+		    
+		    <div id="addCartButton">
+		    	<br><button id="productDetailBack" onclick="productDetailBack()" class="back">Back</button><br>
+		    </div>
+		 </div>
+	</div>
+	<div id="main">
+		<div id="firstPage">
+      		<div id="header">
+        		<img src="logo.png" id="logo2">
+        		<div>
+        			<input type="text" id="searchBar" value="" placeholder="search for products, brands and more">
+        			<input type="button" value="Search" onclick="search()">
+        		</div>
+        		<div id="profile" onclick="profile()" class="topSmallBox">
+                
+        		</div>
+        		<div id="cart" onclick="viewCart()" class="topSmallBox"> 
+                	CART
+        		</div>
+      		</div>
+      		<div id="categoriesBoxFull">
+	      		<div class="categoriesBox" id="GROCERY">
+	      			<div class="dummy">
+	      				<div class="staticBox">
+	      					GROCERY
+	      				</div>
+	      			</div>
+	      		</div>
+	      	
+	      		<div class="categoriesBox" id="ELECTRONICS">
+	      			<div class="dummy">
+	      				<div class="staticBox">
+	      					ELECTRONICS
+	      				</div>
+	      			</div>
+	      		</div>
+	      		<div class="categoriesBox" id="FASHION">
+	      			<div class="dummy">
+	      				<div class="staticBox">
+	      					FASHION
+	      				</div>
+	      			</div>
+	      		</div>
+	      		<div class="categoriesBox" id="APPLIANCE">
+	      			<div class="dummy">
+	      				<div class="staticBox">
+	      					APPLIANCE
+	      				</div>
+	      			</div>
+	      		</div>
+	      		<div class="categoriesBox" id="STATIONERY">
+	      			<div class="dummy">
+	      				<div class="staticBox">
+	      					STATIONERY
+	      				</div>
+	      			</div>
+	      		</div>
+      		</div>
+      		<div id="searchProduct">
+      		</div>
+      		<button id="searchToHome" class="back" onclick="searchToHome()">
+      			Back
+      		</button>
+    	</div>
+    	<div id="wishlistProduct">
+      	</div>
+	</div>
+	<div id="confirmAddress">
+		<h2>Please enter your confirm address</h2>
+		<select id="confirmAddressInput">
+					  <option value="Chennai">Chennai</option>
+					  <option value="Coimbatore">Coimbatore</option>
+					  <option value="Cuddalore">Cuddalore</option>
+					  <option value="Dharmapuri">Dharmapuri</option>
+					  <option value="Dindigul">Dindigul</option>
+					  <option value="Erode">Erode</option>
+					  <option value="Kanchipuram">Kanchipuram</option>
+					  <option value="Kanyakumari">Kanyakumari</option>
+					  <option value="Karur">Karur</option>
+					  <option value="Krishnagiri">Krishnagiri</option>
+					  <option value="Madurai">Madurai</option>
+					  <option value="Nagapattinam">Nagapattinam</option>
+					  <option value="Namakkal">Namakkal</option>
+					   <option value="Nigiris">Nilgiris</option>
+					  <option value="Perambalur">Perambalur</option>
+					  <option value="Pudukkottai">Pudukkottai</option>
+					  <option value="Ramanathapuram">Ramanathapuram</option>
+					  <option value="Salem">Salem</option>
+					  <option value="Sivaganga">Sivaganga</option>
+					  <option value="Tenkasi">Tenkasi</option>
+					  <option value="Thanjavur">Thanjavur</option>
+					  <option value="Theni">Theni</option>
+					  <option value="Thoothukudi">Thoothukudi</option>
+					  <option value="Tiruchirappalli">Tiruchirappalli</option>
+					  <option value="Tirunelveli">Tirunelveli</option>
+					  <option value="Tirupathur">Tirupathur</option>
+					  <option value="Tiruppur">Tiruppur</option>
+					  <option value="Tiruvallur">Tiruvallur</option>
+					  <option value="Tiruvannamalai">Tiruvannamalai</option>
+					  <option value="Tiruvarur">Tiruvarur</option>
+					  <option value="Vellore">Vellore</option>
+					  <option value="Viluppuram">Viluppuram</option>
+					  <option value="Virudhunagar">Virudhunagar</option>
+				</select>
+		<input type="button" value="Confirm" id="confirmAddressConfirmButton" onclick="confirmAddress()">
+		<input type="button" value="Cancel" id="confirmAddressCancellButton" onclick="cancellBuy()">
+	</div>
+	<div id="confirmAddressForCart">
+  		<h2>Enter your confirm address:</h2>
+  		<select id="confirmAddressCartInput">
+					  <option value="Chennai">Chennai</option>
+					  <option value="Coimbatore">Coimbatore</option>
+					  <option value="Cuddalore">Cuddalore</option>
+					  <option value="Dharmapuri">Dharmapuri</option>
+					  <option value="Dindigul">Dindigul</option>
+					  <option value="Erode">Erode</option>
+					  <option value="Kanchipuram">Kanchipuram</option>
+					  <option value="Kanyakumari">Kanyakumari</option>
+					  <option value="Karur">Karur</option>
+					  <option value="Krishnagiri">Krishnagiri</option>
+					  <option value="Madurai">Madurai</option>
+					  <option value="Nagapattinam">Nagapattinam</option>
+					  <option value="Namakkal">Namakkal</option>
+					  <option value="Nigiris">Nilgiris</option>
+					  <option value="Perambalur">Perambalur</option>
+					  <option value="Pudukkottai">Pudukkottai</option>
+					  <option value="Ramanathapuram">Ramanathapuram</option>
+					  <option value="Salem">Salem</option>
+					  <option value="Sivaganga">Sivaganga</option>
+					  <option value="Tenkasi">Tenkasi</option>
+					  <option value="Thanjavur">Thanjavur</option>
+					  <option value="Theni">Theni</option>
+					  <option value="Thoothukudi">Thoothukudi</option>
+					  <option value="Tiruchirappalli">Tiruchirappalli</option>
+					  <option value="Tirunelveli">Tirunelveli</option>
+					  <option value="Tirupathur">Tirupathur</option>
+					  <option value="Tiruppur">Tiruppur</option>
+					  <option value="Tiruvallur">Tiruvallur</option>
+					  <option value="Tiruvannamalai">Tiruvannamalai</option>
+					  <option value="Tiruvarur">Tiruvarur</option>
+					  <option value="Vellore">Vellore</option>
+					  <option value="Viluppuram">Viluppuram</option>
+					  <option value="Virudhunagar">Virudhunagar</option>
+				</select>
+  		<input type="button" value="Confirm" id="confirmAddressConfirmButton" onclick="confirmAddressCart()">
+		<input type="button" value="Cancel" id="confirmAddressCancellButton" onclick="cancellBuyCart()">	
+	</div>
+</body>
+</html>
